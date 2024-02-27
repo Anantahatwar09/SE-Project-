@@ -3,7 +3,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
 exports.registerUser = async (req, res) => {
-    const { name, email, password } = req.body;
+    const { name, email, password, mobileNumber, pinCode } = req.body;
 
     try {
         // Check if the user already exists
@@ -12,11 +12,12 @@ exports.registerUser = async (req, res) => {
             return res.status(400).json({ msg: 'User already exists' });
         }
 
-        // Create a new user instance
         user = new User({
             name,
             email,
-            password
+            password,
+            mobileNumber,
+            pinCode 
         });
 
         // Hash the password
@@ -42,6 +43,7 @@ exports.registerUser = async (req, res) => {
         res.status(500).send('Server error');
     }
 };
+
 
 exports.loginUser = async (req, res) => {
     const { email, password } = req.body;
