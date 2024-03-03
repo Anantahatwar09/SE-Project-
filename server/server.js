@@ -19,6 +19,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/rental-platform', { useNewUrlParser:
     .then(() => console.log('MongoDB connected'))
     .catch(err => console.log(err));
 
+app.use('/uploads', express.static('uploads'));
 // Routes
 app.use('/api/users', userRoutes);
 app.use('/api/products', productsRoutes);

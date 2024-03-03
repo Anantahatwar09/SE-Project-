@@ -3,7 +3,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
 exports.registerUser = async (req, res) => {
-    const { name, email, password, mobileNumber, pinCode } = req.body;
+    const { name, email, password, mobileNumber, pinCode,role } = req.body;
 
     try {
         // Check if the user already exists
@@ -36,7 +36,7 @@ exports.registerUser = async (req, res) => {
 
         jwt.sign(payload, 'your_jwt_secret', { expiresIn: 360000 }, (err, token) => {
             if (err) throw err;
-            res.json({ token });
+            res.json({ token,email,role});
         });
     } catch (err) {
         console.error(err.message);
@@ -61,7 +61,7 @@ exports.loginUser = async (req, res) => {
             return res.status(400).json({ msg: 'Invalid Credentials' });
         }
 
-        // Create and return the JWT token
+        // Create and return the JWT token and user's email
         const payload = {
             user: {
                 id: user.id
@@ -70,7 +70,7 @@ exports.loginUser = async (req, res) => {
 
         jwt.sign(payload, 'your_jwt_secret', { expiresIn: 360000 }, (err, token) => {
             if (err) throw err;
-            res.json({ token });
+            res.json({ token, email }); // Sending email along with token
         });
     } catch (err) {
         console.error(err.message);
