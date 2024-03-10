@@ -1,0 +1,110 @@
+.payment-option {
+    background-color: #f4f7f6;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    margin: auto;
+  }
+  
+  .payment-option h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .options {
+    margin-bottom: 20px;
+  }
+  
+  .option {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .option input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+  
+  .option:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  .option input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .option input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  .option .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+  }
+  
+  .submit-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  .submit-btn:hover {
+    background-color: #45a049;
+  }
+
+  .processing {
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+  }
+  
+  .payment-complete {
+    position: fixed; /* Use fixed to make it stay in place even when scrolling */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    z-index: 1000; /* Ensure it's on top of other content */
+  }
+  
+  .payment-complete img {
+    width: auto; /* Maintain original width */
+    height: 80%; /* Adjust height to be less than full screen for visibility */
+  }

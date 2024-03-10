@@ -1,0 +1,95 @@
+/* Enhanced Global Styles */
+body, html {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ProductInfo Page Enhanced Styles */
+.productInfo-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  background-color: #f7f7f7;
+}
+
+.productInfo-container {
+  display: flex;
+  width: 80%; /* Control width of the middle section */
+  max-width: 1200px; /* Maximum width */
+  background-color: #FFFFFF;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+.productInfo-images {
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+}
+
+.productInfo-images img {
+  max-height: 500px; /* Control image height */
+  width: auto; /* Maintain aspect ratio */
+  max-width: 100%; /* Ensure it fits container */
+  border-radius: 8px;
+}
+
+.productInfo-thumbnails {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px; /* Reduce gap for smaller screens */
+  padding: 10px 0;
+}
+
+.productInfo-thumbnails img {
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  border: 3px solid transparent; /* Highlight active thumbnail */
+  border-radius: 4px; /* Rounded corners for thumbnails */
+}
+
+.productInfo-thumbnails img:hover, .productInfo-thumbnail.active {
+  border-color: #3498DB; /* Highlight on hover and active state */
+}
+
+.productInfo-details {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Space elements evenly */
+}
+
+.productInfo-title, .productInfo-price, .productInfo-description {
+  margin-bottom: 20px; /* Increase spacing */
+}
+
+.productInfo-addToCart {
+  align-self: center; /* Center button */
+  margin-top: 20px; /* Extra space above the button */
+}
+
+@media (max-width: 768px) {
+  .productInfo-container {
+    flex-direction: column;
+    width: 90%; /* Increase width for small screens */
+  }
+
+  .productInfo-images, .productInfo-details {
+    width: auto; /* Adjust width for responsiveness */
+  }
+
+  .productInfo-images img {
+    border-radius: 0; /* Remove border radius on small screens */
+  }
+}
