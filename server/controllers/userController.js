@@ -77,3 +77,34 @@ exports.loginUser = async (req, res) => {
         res.status(500).send('Server error');
     }
 };
+
+exports.getUserData = async (req, res) => {
+    // Extract the token from the request headers
+    const token = req.header('x-auth-token');
+
+    // Check if token exists
+    if (!token) {
+        return res.status(401).json({ msg: 'No token, authorization denied' });
+    }
+
+    try {
+        // Verify the token
+        const decoded = jwt.verify(token, 'your_jwt_secret');
+
+        // Extract user ID from decoded token
+        const userId = decoded.user.id;
+
+        // Fetch user details from the database using the user ID
+        const user = await User.findById(userId).select('-password'); // Exclude password from the response
+
+        if (!user) {
+            return res.status(404).json({ msg: 'User not found' });
+        }
+
+        // Return the user details
+        res.json(user);
+    } catch (err) {
+        console.error(err.message);
+        res.status(500).send('Server Error');
+    }
+};

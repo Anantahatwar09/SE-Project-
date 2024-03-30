@@ -1,10 +1,14 @@
-// routes/productsRoutes.js
 const express = require('express');
 const router = express.Router();
-const { addProduct } = require('../controllers/productController');
-const upload = require('../controllers/uploadConfig'); // Adjust the path as necessary
+const { addProduct, getProducts, getProductInfo,getUserProduct } = require('../controllers/productController');
+const upload = require('../controllers/uploadConfig');
 
-// POST route for adding a new product
-router.post('/add-product', upload.single('photo'), addProduct);
+
+// Routes for handling product-related requests
+router.post('/add-product', upload, addProduct);
+router.get('/get-products', getProducts);
+router.get('/product-info/:productId', getProductInfo);
+router.get('/get-userproduct', getUserProduct);
+
 
 module.exports = router;
