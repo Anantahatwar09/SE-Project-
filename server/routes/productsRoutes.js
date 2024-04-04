@@ -9,7 +9,6 @@ router.post('/add-product', upload, addProduct);
 router.get('/get-products', getProducts);
 router.get('/product-info/:productId', getProductInfo);
 router.get('/get-userproduct', getUserProduct);
-router.get('/get-username',getOwnerName);
 
 
 module.exports = router;

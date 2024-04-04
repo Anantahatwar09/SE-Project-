@@ -97,31 +97,3 @@ exports.getUserProduct = async (req, res) => {
       res.status(500).json({ message: 'Failed to fetch products' });
   }
 };
-
-exports.getOwnerName = async (req, res) => {
-  try {
-    const productId = req.params.productId;
-
-    // Find the product by ID
-    const product = await Product.findById(productId);
-
-    // If product is not found, return an error
-    if (!product) {
-      return res.status(404).json({ message: 'Product not found' });
-    }
-
-    // Find the owner by user ID associated with the product
-    const owner = await User.findById(product.user);
-
-    // If owner is not found, return an error
-    if (!owner) {
-      return res.status(404).json({ message: 'Owner not found' });
-    }
-
-    // Return the owner's name
-    res.status(200).json({ ownerName: owner.name });
-  } catch (error) {
-    console.error('Error retrieving owner name:', error);
-    res.status(500).json({ message: 'Failed to retrieve owner name', error: error.toString() });
-  }
-};
