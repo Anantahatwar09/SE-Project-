@@ -1,0 +1,47 @@
+
+.cards-container__customer_support {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Adjust the space between cards */
+}
+
+.card_customer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 200px; /* Adjust card width as needed */
+  transition: transform 0.3s ease-in-out;
+}
+
+.card_customer:hover {
+  transform: translateY(-10px);
+}
+
+.icon {
+  font-size: 24px; /* Adjust based on the icons you use */
+  color: #4CAF50; /* Example color, adjust as needed */
+  margin-bottom: 15px;
+}
+
+.content h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+  text-align: center;
+}
+
+.content p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+}
+
+body {
+  background-color: #ffffff; /* Dull white color */
+}

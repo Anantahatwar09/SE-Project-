@@ -1,0 +1,130 @@
+/* Global Styles */
+.all {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body, html {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: #4CAF50;
+  color: #ffffff;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+/* Booking Container */
+.booking-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  background-color: #fff;
+  padding: 20px;
+  width: 250px; /* Increased width */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Product Card Styling */
+.product-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  height: 400px; /* Increased height */
+}
+
+.product-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.product-card-img {
+  width: 100%;
+  height: 280px; /* Adjusted for a better appearance */
+  object-fit: cover;
+}
+
+.product-card-info {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1; /* Allows the info section to fill the remaining space */
+}
+
+.product-card-title {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #333;
+  text-align: center;
+}
+
+.product-card-price {
+  font-size: 24px;
+  color: #4CAF50;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Cards Container */
+.cards-container__booking {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Footer Styling */
+.footer {
+  background-color: #4CAF50;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: auto;
+  width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .booking-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sidebar {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .cards-container__booking {
+    grid-template-columns: 1fr;
+  }
+}

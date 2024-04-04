@@ -1,0 +1,196 @@
+.form-container {
+  max-width: 670px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+}
+.form-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-section {
+  margin-bottom: 20px;
+}
+.form-section h4 {
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 18px;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #666;
+  font-size: 16px;
+}
+input[type="text"], select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+input[type="file"] {
+  border: none;
+}
+.photo-upload .photo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px; /* More gap for better separation */
+}
+
+button {
+  width: 100%; /* Full width for better mobile experience */
+  background-color: #4CAF50; /* Changed to a more vibrant color */
+  color: white;
+  padding: 15px 20px; /* More padding for bigger button */
+  border: none;
+  border-radius: 8px; /* Consistent rounded borders */
+  cursor: pointer;
+  font-size: 18px; /* Larger font size */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+button, .toggle-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover, .toggle-button.selected {
+  background-color: #45a049;
+}
+.date-picker-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align the picker for better visual appeal */
+  padding: 20px;
+}
+.date-range-picker {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Soft shadow for depth */
+  border-radius: 8px; /* Rounded corners */
+  overflow: hidden; /* Ensure inner parts don't break border radius */
+}
+.DateInput_input {
+  border: 2px solid #ccc; /* Subtle border */
+  padding: 10px;
+  border-radius: 4px; /* Match the border-radius with your design language */
+  font-size: 16px; /* Readable text size */
+}
+.DateInput_input:focus {
+  border-color: #4CAF50; /* Highlight color on focus */
+}
+.date-range-picker-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.basic-date-range-picker {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+.photo-upload {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.photo-upload input[type="file"] {
+  flex: 1;
+  padding: 10px;
+  background-color: #f7f7f7;
+  border: 2px dashed #ddd;
+  border-radius: 4px;
+  text-align: center;
+}
+button:hover {
+  background-color: #4CAF50; /* Darker shade on hover */
+}
+
+.form-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Increased gap for clarity */
+  align-items: center;
+}
+
+input[type="radio"], input[type="file"] {
+  margin-right: 10px;
+}
+
+textarea {
+  resize: vertical; /* Users can adjust vertical size */
+}
+
+/* Enhanced styles for visual feedback on interactive elements */
+input[type="text"]:focus, select:focus, textarea:focus {
+  border-color: #4CAF50; /* Highlight color when focused */
+  outline: none; /* Remove default focus outline */
+}
+
+.toggle-button {
+  background-color: transparent; /* Less intrusive background */
+  border-radius: 8px; /* Consistency in shapes */
+  transition: all 0.3s ease; /* Smooth transition for interaction */
+}
+
+.toggle-button.selected, .toggle-button:hover {
+  background-color: #4CAF50; /* Consistent with button hover */
+  color: white; /* Improved readability and contrast */
+}
+
+/* Additional aesthetic improvements */
+input[type="file"] {
+  background-color: transparent; /* Less intrusive */
+  border: 2px dashed #ccc; /* Dashed border for file input */
+  border-radius: 8px; /* Consistency */
+  text-align: center; /* Center text for better appearance */
+  padding: 15px; /* Increased padding */
+}
+
+/* Ensure consistent spacing and alignment */
+.form-section, .photo-upload, .form-options {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Improve the look & feel of the select dropdown */
+select {
+  -webkit-appearance: none; /* Remove default arrow from Chrome */
+  -moz-appearance: none;    /* Remove default arrow from Firefox */
+  appearance: none;         /* Remove default arrow from modern browsers */
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path fill="%23666" d="M6.516 7.548c0.436-0.446 1.043-0.481 1.576 0l5.908 6.047c0.533 0.481 0.896 0.348 0.896-0.293V3.091c0-0.641 0.481-1.15 1.092-1.15s1.058 0.509 1.058 1.15v10.211c0 1.775-1.332 2.319-2.946 1.15l-5.908-6.047c-0.509-0.52-1.059-0.481-1.495 0l-5.908 6.047c-1.614 1.169-2.946 0.626-2.946-1.15V3.091c0-0.641 0.509-1.15 1.092-1.15s1.058 0.509 1.058 1.15v10.211c0 0.641 0.363 0.774 0.896 0.293l5.908-6.047z"/></svg>'); /* Custom arrow */
+  background-repeat: no-repeat;
+  background-position: right 10px top 50%; /* Position the arrow on the right */
+  padding-right: 30px; /* Ensure text doesn't overlap the arrow */
+}
+.CalendarDay__selected_span, .CalendarDay__selected, .CalendarDay__hovered_span:hover, .CalendarDay__hovered_span {
+  background: #4CAF50; /* Theme color for selection */
+  color: white; /* White text for better readability */
+}
+
+.CalendarDay:hover, .CalendarDay__default:hover {
+  background: #e3f2fd; /* Light background on hover for visibility */
+  border-radius: 50%; /* Circular hover effect */
+}
+@media (max-width: 768px) {
+  .date-range-picker {
+    width: 100%; /* Full width on smaller screens */
+  }
+
+  .DateRangePicker_picker {
+    display: block !important; /* Ensure visibility on mobile */
+  }
+}
+
+.DayPickerNavigation_button {
+  border: none; /* Remove default borders */
+  background-color: transparent; /* Transparent background */
+}

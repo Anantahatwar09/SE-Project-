@@ -1,0 +1,269 @@
+
+body {
+  font-family: 'Arial', sans-serif; /* Change to your preferred font */
+  background-color: #000000; /* Softer background color */
+  line-height: 1.6;
+  color: #333; /* Standard text color */
+  margin: 0;
+  padding: 0;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4CAF50; /* Fresh color for the navbar */
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Subtle shadow for depth */
+}
+  
+  .navbar-logo img {
+    width: 50px; /* Adjust based on your logo size */
+  }
+  
+  .navbar-header h1, .navbar-header h2 {
+    margin: 0;
+    padding: 0;
+    color: #333; /* Adjust text color as needed */
+  }
+  
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-links li {
+    margin: 0 10px;
+  }
+  
+  .navbar-links li a {
+    text-decoration: none;
+    color: white; /* Brighter text for better readability */
+    transition: color 0.3s ease; /* Smooth transition for hover effects */
+  }
+  .navbar-links li a:hover {
+    color: #a8dadc; /* Slightly lighter color on hover */
+  }
+  .btn {
+    display: inline-block;
+    background-color: #4CAF50; /* Standard button color */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  }
+  .btn:hover {
+    background-color: #5cb300; /* Darker shade on hover for feedback */
+  }
+  .slider-container {
+    position: relative;
+    max-width: 100%;
+    margin: 20px auto;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+  }  
+  
+  .navbar-buttons .btn {
+    text-decoration: none;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+  }
+  
+  .btn-login {
+    background-color: #4CAF50; /* Green */
+    color: white;
+  }
+  
+  .btn-signup {
+    background-color: #4CAF50; /* Darker grey */
+    color: white;
+  }
+  
+  .farm-equipment-section {
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background, adjust as needed */
+    text-align: center;
+  }
+  
+  .section-eq {
+    margin-bottom: 20px;
+    color: #000000; /* Dark text color */
+  }
+  
+  .equipment-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Creates 4 columns */
+    gap: 20px;
+    padding: 20px;
+  }
+  .equipment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust min-width for responsiveness */
+    gap: 20px;
+    padding: 20px;
+  }
+  @media (max-width: 768px) {
+    .get-started-options, .navbar-links {
+      flex-direction: column;
+      gap: 10px; /* More space between items on smaller screens */
+    }
+  
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start; /* Align items for better spacing */
+    }
+  
+    .equipment-grid {
+      grid-template-columns: repeat(2, 1fr); /* Adjust for better layout on tablets */
+    }
+  }
+  
+  /* Adjustments for different screen sizes */
+  @media (max-width: 1200px) {
+    .equipment-grid {
+      grid-template-columns: repeat(3, 1fr); /* 3 columns for smaller screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .equipment-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns for mobile screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .equipment-grid {
+      grid-template-columns: 1fr; /* 1 column for very small screens */
+    }
+  }
+  @media (max-width: 480px) {
+    .equipment-grid {
+      grid-template-columns: 1fr; /* Single column for mobile */
+    }
+  }
+  
+  .equipment-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px; /* Adds rounded corners to the images */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Smooth transition for transform and filter */
+  }
+  
+  .equipment-item h3 {
+    margin-top: 10px;
+  }
+  .hover-text {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-weight: bold;
+    display: none; /* Hide by default */
+  }
+  
+  .equipment-item:hover .hover-text {
+    display: block; /* Show on hover */
+  }
+  .equipment-item {
+    position: relative;
+    /* Other styles remain the same */
+  }
+  
+  
+  .equipment-item:hover img {
+    transform: scale(1.03); /* Less aggressive scale for subtlety */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Shadow for depth */
+  }
+/* Add to HomePage.css */
+
+.equipment-item {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .equipment-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+  
+  .equipment-item:hover img {
+    transform: scale(1.05);
+    filter: brightness(90%);
+  }
+  
+  .hover-text {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-weight: bold;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: adds background for readability */
+    padding: 5px 10px; /* Optional: adds some padding */
+    border-radius: 5px; /* Optional: rounds the corners */
+  }
+  
+  .equipment-item:hover .hover-text {
+    display: block;
+  }
+  .get-started-section {
+    background-color: #ffffff; /* Clear white background for focus */
+    padding: 40px;
+    border-radius: 8px; /* Soft rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    margin: 20px;
+    transition: all 0.3s ease; /* Smooth transition for all changes */
+  }
+  .get-started-section:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Increased shadow on hover for emphasis */
+  }
+  .get-started-section h2 {
+    margin-bottom: 20px;
+  }
+  
+  .get-started-section p {
+    margin-bottom: 30px;
+  }
+  
+  .get-started-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Adjust the space between the two options */
+  }
+  
+  .option {
+    flex: 1;
+    max-width: 500px; /* Adjust based on preference */
+    padding: 20px;
+    background-color: white; /* White background for the options */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: adds a subtle shadow */
+    border-radius: 5px; /* Optional: rounds the corners */
+  }
+  
+  .option h3 {
+    color: #333; /* Dark text for titles */
+  }
+  
+  .btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    color: white;
+    background-color: #4CAF50; /* Green background for buttons */
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .btn-primary {
+    background-color: #4CAF50; /* Example primary button color */
+  }
+  
+  .btn-secondary {
+    background-color: #4CAF50; /* Example secondary button color */
+  }
+  

@@ -1,0 +1,98 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(to right, #4CAF50, #81C784); /* Gradient background */
+  padding: 25px 40px; /* Increased padding for better spacing */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Subtle shadow */
+  color: white; /* Change text color to white for better contrast */
+}
+
+.navbar-logo img {
+  width: 60px; /* Adjust based on your logo size */
+}
+
+.navbar-header h1, .navbar-header h2 {
+  margin: 0;
+  padding: 0;
+  color: white; /* Change text color to white for better visibility */
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+  
+.navbar-links li {
+  margin: 0 20px; /* Increased margin for better spacing */
+}
+  
+.navbar-links li a {
+  text-decoration: none;
+  color: white; /* Changed link color to white for better visibility */
+  transition: color 0.3s; /* Smooth transition for hover effect */
+}
+.navbar-links li a:hover {
+  color: #f0f0f0; /* Lighter shade for hover effect */
+}
+
+.navbar-buttons .btn {
+  text-decoration: none;
+  padding: 12px 18px; /* Increased padding for larger buttons */
+  border: none;
+  border-radius: 5px;
+  margin-left: 20px; /* Increased margin for better spacing */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Subtle shadow */
+}
+.btn-login {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+.btn-login:hover {
+  background-color: #66BB6A; /* Lighter green */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Larger shadow on hover */
+}
+  
+.btn-signup {
+  background-color: #555; /* Darker grey */
+  color: white;
+}
+
+.btn-signup:hover {
+  background-color: #6d6d6d; /* Lighter grey */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Larger shadow on hover */
+}
+.user-info1 {
+  color: #FFFFFF; /* Assuming white text color */
+  background-color: #4CAF50; /* Green background to match the theme */
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+  position: relative;
+}
+
+
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-menu .logout-button {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-menu .logout-button:hover {
+  background-color: #f1f1f1;
+}
