@@ -16,7 +16,15 @@ const UserSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    // Add any additional fields you require
+    mobileNumber: {
+        type: String,
+        required: true,
+        unique: true
+    },
+    pinCode: {
+        type: String,
+        required: true
+    }
 });
 
 // Pre-save action to hash password before saving
