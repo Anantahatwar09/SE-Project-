@@ -1,0 +1,116 @@
+.footer-background {
+  background-color: #4CAF50;
+  color: #FFFFFF;
+  padding: 15px 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 8px;
+  text-align: center;
+}
+
+.logo-section, .social-media-section, .ministry-section {
+  cursor: pointer;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.section-text, .feedback-text, .creator-text, .ministry-title {
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.links-column {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0;
+}
+
+.links-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; /* Adjust as needed */
+}
+
+.links-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 10px; /* Adjust spacing between columns */
+}
+
+.links-list li {
+  cursor: pointer;
+  margin-bottom: 10px; /* Adjust space between links */
+  color: #FFFFFF; /* Assuming white text for visibility */
+  font-size: 1rem; /* Adjust as needed */
+}
+
+.first-column li, .second-column li {
+  text-align: left; /* Ensures text alignment is consistent */
+}
+
+@media (max-width: 768px) {
+  .links-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .links-list {
+    margin: 10px 0; /* Adjust for vertical spacing in mobile view */
+  }
+}
+
+.social-icons img {
+  margin: 0 10px;
+  width: 30px;
+  height: 30px;
+}
+
+.footerLogo, .footerBgImg {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+  }
+}  
+.ministry-logo {
+  max-width: 60px; /* Adjust the width as needed */
+  height: auto; /* Keep the aspect ratio */
+}
+.section-title {
+  color: rgb(255, 255, 255);
+}
+.logout-button {
+  margin-top: 20px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  background-color: #ffffff; /* White background for contrast */
+  color: #4CAF50; /* Green text to match the footer theme */
+  border: 2px solid #ffffff; /* White border for consistency */
+  border-radius: 20px; /* Rounded edges for a modern look */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #4CAF50; /* Footer background color for hover */
+  color: #ffffff; /* White text for contrast on hover */
+  border-color: #4CAF50;
+}
